@@ -1,0 +1,20 @@
+{
+    "name": "node-red-resin-demo",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {
+        "node-red": "0.19.*",
+        "node-red-contrib-ibm-watson-iot": "0.2.8",
+        "node-red-node-pi-sense-hat": ">=0.0.18",
+        "puck-remote": "github:knolleary/puck-remote"
+    },
+    "scripts": {
+        "start": "node --max-old-space-size=160 ./node_modules/node-red/red.js --userDir . --settings ./settings.js flows.json"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
